@@ -13,7 +13,7 @@ const EditBook = ({ bookId }) => {
 
   const fetchBook = async () => {
     try {
-      const response = await fetch(`http://localhost:4500/books/${bookId}`);
+      const response = await fetch(`https://backend-mu-taupe-45.vercel.app/books/${bookId}`);
       const data = await response.json();
       setBook(data);
       setTitle(data.title);
@@ -32,7 +32,7 @@ const EditBook = ({ bookId }) => {
 
   const handleUpdate = async () => {
     try {
-      const response = await fetch(`http://localhost:4500/books/${bookId}`, {
+      const response = await fetch(`https://backend-mu-taupe-45.vercel.app/books/${bookId}`, {
         method: 'PUT',
         headers: {
           'Content-Type': 'application/json',

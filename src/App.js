@@ -14,7 +14,7 @@ function App() {
 
   const fetchBooks = async () => {
     try {
-      const response = await fetch('http://localhost:4500/books');
+      const response = await fetch('https://backend-mu-taupe-45.vercel.app/books');
       const data = await response.json();
       setBooks(data);
     } catch (error) {
@@ -34,7 +34,7 @@ function App() {
   };
   const handleDeleteBook = async (bookId) => {
     try {
-      const response = await fetch(`http://localhost:4500/books/${bookId}`, {
+      const response = await fetch(`https://backend-mu-taupe-45.vercel.app/books/${bookId}`, {
         method: 'DELETE',
       });
       if (response.ok) {
