@@ -41,7 +41,7 @@ function App() {
         // Deletion was successful, fetch updated book list
         fetchBooks();
       } else {
-        console.log('Deletion failed',response);
+        console.log('Deletion failed');
       }
     } catch (error) {
       console.log('Error:', error);
